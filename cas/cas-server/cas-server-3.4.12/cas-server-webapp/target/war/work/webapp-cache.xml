@@ -175,6 +175,7 @@
           <string>WEB-INF/lib/javassist-3.7.ga.jar</string>
           <string>WEB-INF/lib/hibernate-validator-4.0.2.GA.jar</string>
           <string>WEB-INF/lib/mysql-connector-java-5.1.20.jar</string>
+          <string>WEB-INF/lib/spymemcached-2.8.1.jar</string>
         </pathsSet>
       </path-set>
     </entry>
@@ -356,6 +357,30 @@
         <optional>false</optional>
       </dependency>
       <targetFileName>mysql-connector-java-5.1.20.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.jasig.cas</groupId>
+        <artifactId>cas-server-integration-memcached</artifactId>
+        <version>${cas.version}</version>
+        <type>jar</type>
+        <scope>system</scope>
+        <systemPath>/home/chongyu/workspace/mikeccydemo/cas/cas-server/cas-server-3.4.12/modules/cas-server-integration-memcached-3.4.12.jar</systemPath>
+        <exclusions/>
+        <optional>false</optional>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>spy</groupId>
+        <artifactId>spymemcached</artifactId>
+        <version>2.8.1</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <optional>false</optional>
+      </dependency>
+      <targetFileName>spymemcached-2.8.1.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
