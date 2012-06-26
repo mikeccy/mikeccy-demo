@@ -93,12 +93,30 @@
 				<bean
 					class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler" />
 			-->
+<!--
 <bean class="org.jasig.cas.adaptors.generic.FileAuthenticationHandler" p:fileName="file:/root/authentication_database.txt" />
+-->
+<bean class="org.jasig.cas.adaptors.jdbc.SearchModeSearchDatabaseAuthenticationHandler">
+    <property name="tableUsers"><value>users</value></property>
+    <property name="fieldUser"><value>username</value></property>
+    <property name="fieldPassword"><value>password</value></property>
+    <property name="dataSource" ref="test-dataSource"/>
+</bean>
+  
 
 			</list>
 		</property>
 	</bean>
-
+<bean id="test-dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">
+    <property name="driverClassName">
+      <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property name="url">
+      <value>jdbc:mysql://localhost:3306/cas_auth_test</value>
+    </property>
+    <property name="username"><value>root</value></property>
+    <property name="password"><value>mike8947</value></property>
+  </bean>
 
 	<!--
 	This bean defines the security roles for the Services Management application.  Simple deployments can use the in-memory version.

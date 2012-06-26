@@ -10,14 +10,6 @@
     <packaging>war</packaging>
     <name>JA-SIG CAS Web Application</name>
     <dependencies>
-	
-
-
-	<dependency>
-     		<groupId>${project.groupId}</groupId>
-     		<artifactId>cas-server-support-generic</artifactId>
-     		<version>${project.version}</version>
-	</dependency>
 
         <dependency>
             <groupId>org.mockito</groupId>
@@ -94,6 +86,21 @@
             <artifactId>hibernate-validator</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+	<dependency>
+     		<groupId>org.jasig.cas</groupId>
+     		<artifactId>cas-server-support-jdbc</artifactId>
+     		<version>${cas.version}</version>
+		<scope>system</scope>
+    		<systemPath>/home/chongyu/workspace/mikeccydemo/cas/cas-server/cas-server-3.4.12/modules/cas-server-support-jdbc-3.4.12.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.20</version>
+	</dependency>
+            
     </dependencies>
 
     <build>
